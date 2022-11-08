@@ -1,0 +1,18 @@
+.partners {
+  position: relative;
+  height: 542px;
+  background-color: #2840a2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/partners-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
