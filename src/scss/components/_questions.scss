@@ -1,0 +1,29 @@
+.questions {
+  background-color: #2840a2;
+  // height: 500px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__subject {
+    text-align: center;
+  }
+
+  &__caption {
+    position: relative;
+    padding-left: 111px;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   margin-left: -111px;
+    //   width: 74px;
+    //   height: 74px;
+    //   background-image: url("../img/quest.png");
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   background-size: contain;
+    // }
+  }
+}

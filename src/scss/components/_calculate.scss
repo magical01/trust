@@ -1,0 +1,141 @@
+.calculate {
+  height: 734px;
+  background-color: #375bcc;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 82px;
+    padding-bottom: 135px;
+  }
+
+  &__title {
+    margin-bottom: 87px;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    border-radius: 25px;
+    margin-right: 94px;
+    padding-top: 39px;
+    // padding-right: 29px;
+    // padding-bottom: 38px;
+    // padding-left: 47px;
+    width: 1088px;
+    // height: 368px;
+    background-color: #2840a2;
+  }
+}
+
+.form-calculate {
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-right: 29px;
+    padding-left: 47px;
+  }
+
+  &__input {
+    border-bottom: 1px solid rgba(#fff, 0.5);
+    padding-bottom: 10px;
+    width: 100%;
+    font-weight: 400;
+    color: var(--white-color);
+    background-color: transparent;
+    transition: border-bottom .3s;
+
+    &::placeholder {
+      opacity: 1;
+      color: var(--white-color);
+      transition: opacity .3s;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid rgba(#fff, 1);
+      transition: border-bottom .3s;
+
+      &::placeholder {
+        opacity: 0;
+        transition: opacity .3s;
+      }
+    }
+
+    &:active {
+      border-bottom: 1px solid rgba(#fff, 1);
+      transition: border-bottom .3s;
+
+      &::placeholder {
+        opacity: 0;
+        transition: opacity .3s;
+      }
+    }
+  }
+
+  &__label {
+    width: 20%;
+
+    & + & {
+      margin-left: 85px;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+    padding: 32px 67px;
+  }
+
+  &__bottom {
+    border-radius: 0 0 25px 25px;
+    margin-top: auto;
+    padding-top: 36px;
+    padding-right: 29px;
+    padding-bottom: 33px;
+    padding-left: 47px;
+    background-color: #2a4bb2;
+
+  }
+
+  &__caption {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 24px;
+    color: #f9db13;
+  }
+
+  &__nums {
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__currency {
+    color: #f9db13;
+  }
+
+  &__text {
+    opacity: 0.5;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+
+}
+
+.label {
+  &-sum {
+    width: 32.7%;
+  }
+
+  &-currency {
+    width: 15%;
+  }
+}
