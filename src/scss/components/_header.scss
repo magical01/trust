@@ -5,9 +5,17 @@
   z-index: 5;
   width: 100%;
 
+  @include small-tablet {
+    top: 30px;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @include small-tablet {
+      align-items: center;
+    }
   }
 
   &__btn {
@@ -18,7 +26,29 @@
     font-size: 24px;
     line-height: 24px;
     color: var(--white-color);
-    background-color: #5680f8;
+    background-color: rgba(#5680f8, 1);
+    transition: background-color .3s;
+
+    &:hover {
+      background-color: rgba(#5680f8, 0.7);
+      transition: background-color .3s;
+    }
+
+    @include small-tablet {
+      padding: 20px 30px;
+    }
+
+    @include mobile {
+      width: 190px;
+      padding: 15px 15px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @include mini-mobile {
+      padding: 12px 15px;
+      width: 179px;
+    }
   }
 }
 
@@ -29,6 +59,10 @@
   padding-left: 45px;
   height: fit-content;
   line-height: 24px;
+
+  @include mini-mobile {
+    font-size: 0px;
+  }
 
   span {
     color: var(--accent-color);

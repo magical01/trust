@@ -1,29 +1,133 @@
 .questions {
+  position: relative;
+  z-index: 10;
   background-color: #2840a2;
-  // height: 500px;
+
+  &__container {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
 
   &__title {
+    margin-bottom: 32px;
     text-align: center;
   }
 
   &__subject {
+    margin: 0;
+    margin-bottom: 82px;
+    padding-left: 27px;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
     text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    padding-left: 4px;
+
+    &:nth-child(1) {
+      margin-bottom: 71px;
+
+      .questions__caption {
+        &::before {
+          left: 0px;
+          top: -20px;
+          width: 74px;
+          height: 74px;
+          background-image: url("../img/quest.png");
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 57px;
+
+      .questions__caption {
+        &::before {
+          left: 0px;
+          top: -13px;
+          width: 91px;
+          height: 58px;
+          background-image: url("../img/dollar.png");
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 58px;
+
+      .questions__caption {
+        &::before {
+          left: 0px;
+          top: -31px;
+          width: 72px;
+          height: 84px;
+          background-image: url("../img/pig.png");
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      margin-bottom: 57px;
+
+      .questions__caption {
+        &::before {
+          top: -12px;
+          left: 0px;
+          width: 83px;
+          height: 76px;
+          background-image: url("../img/pc.png");
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      .questions__caption {
+        max-width: 93%;
+
+        &::before {
+          left: 0px;
+          top: 4px;
+          width: 82px;
+          height: 63px;
+          background-image: url("../img/card.png");
+        }
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
   }
 
   &__caption {
+    display: inline-block;
     position: relative;
-    padding-left: 111px;
+    margin-bottom: 38px;
+    padding-left: 110px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #ef6b62;
 
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   margin-left: -111px;
-    //   width: 74px;
-    //   height: 74px;
-    //   background-image: url("../img/quest.png");
-    //   background-position: center;
-    //   background-repeat: no-repeat;
-    //   background-size: contain;
-    // }
+    &::before {
+      content: "";
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    padding-left: 110px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
   }
 }

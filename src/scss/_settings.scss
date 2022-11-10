@@ -86,6 +86,18 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  @include big-desktop {
+    padding: 0 30px;
+  }
+
+  @include md-tablet {
+    padding: 0 20px;
+  }
+
+  @include mobile {
+    padding: 0 15px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -125,5 +137,44 @@ a {
   line-height: 30px;
   text-transform: uppercase;
   color: var(--white-color);
-  background-color: var(--accent-color);
+  background-color: rgba(#ff5147, 1);
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: rgba(#ff5147, 0.7);
+    transition: background-color .3s;
+  }
+
+  @include small-tablet {
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  @include mini-mobile {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.just-validate-error-label {
+  position: absolute;
+  left: 32px;
+  font-size: 26px;
+  line-height: 26px;
+
+  @include xl-tablet {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @include md-tablet {
+    top: 82px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include small-tablet {
+    top: 63px;
+    left: 21px;
+  }
 }

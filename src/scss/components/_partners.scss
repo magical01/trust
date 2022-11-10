@@ -16,7 +16,43 @@
   //   background-size: cover;
   // }
 
+
+  &__container {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -17px;
+      right: 5px;
+      z-index: 2;
+      opacity: 0.9;
+      width: 682px;
+      height: 693px;
+      background-image: url("../img/partners-img.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -68px;
+      right: 116px;
+      opacity: 0.5;
+      width: 615px;
+      height: 615px;
+      background-image: url("../img/partners-btc.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
   &__content {
+    position: relative;
+    z-index: 5;
     padding-top: 75px;
     padding-right: 120px;
     padding-bottom: 98px;

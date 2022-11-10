@@ -1,8 +1,43 @@
 .calculate {
+  position: relative;
+  z-index: 10;
   height: 734px;
   background-color: #375bcc;
 
+  &__container {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 835px;
+      height: 967px;
+      background-image: url("../img/calculate-left.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -62px;
+      right: 0px;
+      opacity: 0.8;
+      width: 689px;
+      height: 854px;
+      background-image: url("../img/calculate-right.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
   &__content {
+    position: relative;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     padding-top: 82px;
@@ -21,11 +56,7 @@
     border-radius: 25px;
     margin-right: 94px;
     padding-top: 39px;
-    // padding-right: 29px;
-    // padding-bottom: 38px;
-    // padding-left: 47px;
     width: 1088px;
-    // height: 368px;
     background-color: #2840a2;
   }
 }
