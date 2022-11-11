@@ -127,6 +127,10 @@
     position: relative;
     z-index: 10;
     padding-bottom: 62px;
+
+    @include mobile {
+      padding-bottom: 50px;
+    }
   }
 
   &__title {
@@ -346,8 +350,13 @@
     }
 
     @include mobile {
+      height: 50px;
       font-size: 20px;
       padding-left: 20px;
+    }
+
+    @include mini-mobile {
+      font-size: 18px;
     }
 
     &::placeholder {
@@ -375,6 +384,7 @@
     }
 
     @include mobile {
+      padding: 15px 20px;
       width: 100%;
     }
   }

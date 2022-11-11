@@ -4,12 +4,21 @@
       <h2 class="calculate__title title">Сколько я могу заработать?</h2>
       <form class="calculate__form form-calculate" action="#" >
         <div class="form-calculate__top">
-          <label class="form-calculate__label label-sum">
-            <input class="form-calculate__input input-reset" type="text" name="Сумма" placeholder="Сумма вклада">
-          </label>
-          <label class="form-calculate__label label-currency">
-            <input class="form-calculate__input input-reset" type="text" name="Валюта"  placeholder="Валюта ₽">
-          </label>
+          <div class="form-calculate__group">
+            <label class="form-calculate__label label-sum">
+              <input class="form-calculate__input input-reset" type="text" name="Сумма" placeholder="Сумма вклада">
+            </label>
+            <button class="custom-select btn-reset" aria-label="Выбрать валюту">
+              <div class="custom-select__top">Валюта ₽</div>
+              <div class="custom-select__bottom">
+                <ul class="custom-select__list list-reset">
+                  <li class="custom-select__item" tabindex="0">Валюта ₽</li>
+                  <li class="custom-select__item" tabindex="0">Валюта $</li>
+                  <li class="custom-select__item" tabindex="0">Валюта €</li>
+                </ul>
+              </div>
+            </button>
+          </div>
           <button class="form-calculate__btn main-btn btn-reset">Посчитать</button>
         </div>
         <div class="form-calculate__bottom">

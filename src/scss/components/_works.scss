@@ -17,6 +17,19 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @media (max-width: 1741px) {
+        // width: 47.7%;
+        background-size: contain;
+      }
+
+      @media (max-width: 1520px) {
+        width: 47.7%;
+      }
+
+      @include small-tablet {
+        display: none;
+      }
     }
 
     &::after {
@@ -31,6 +44,23 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @media (max-width: 1741px) {
+        // width: 37.3%;
+        background-size: contain;
+      }
+
+      @media (max-width: 1520px) {
+        width: 37.3%;
+      }
+
+      @include small-tablet {
+        width: 60%;
+      }
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 
@@ -45,6 +75,23 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (max-width: 1741px) {
+      // width: 56%;
+      background-size: contain;
+    }
+
+    @media (max-width: 1520px) {
+      width: 56%;
+    }
+
+    @include xl-tablet {
+      left: 200px;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__content {
@@ -58,6 +105,25 @@
     padding-bottom: 101px;
     padding-left: 24px;
     z-index: 5;
+
+    @media (max-width: 1629px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include big-desktop {
+      padding-bottom: 60px;
+    }
+
+    @include xl-tablet {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    @include small-tablet {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
   }
 
   &__title {
@@ -66,6 +132,18 @@
 
     span {
       font-weight: 700;
+    }
+
+    @include big-desktop {
+      margin-bottom: 50px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mini-mobile {
+      margin-bottom: 25px;
     }
   }
 
@@ -77,12 +155,60 @@
 
     &:nth-of-type(1) {
       margin-bottom: 34px;
+
+      @include small-tablet {
+        margin-bottom: 20px;
+      }
     }
 
     span {
       font-weight: 700;
       font-size: 30px;
       line-height: 30px;
+
+      @media (max-width: 1500px) {
+        font-size: 26px;
+        line-height: 32px;
+      }
+
+      @include xl-tablet {
+        font-size: 22px;
+        line-height: 26px;
+      }
+
+      @include small-tablet {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+
+    @media (max-width: 1500px) {
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    @include big-desktop {
+      text-align: initial;
+    }
+
+    @include xl-tablet {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 20px;
     }
   }
 }

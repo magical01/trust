@@ -1,6 +1,5 @@
 .partners {
   position: relative;
-  height: 542px;
   background-color: #2840a2;
 
   // &::before {
@@ -33,6 +32,15 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @media (max-width: 1520px) {
+        width: 45.2%;
+        background-size: contain;
+      }
+
+      @include xxl-tablet {
+        display: none;
+      }
     }
 
     &::after {
@@ -47,6 +55,15 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @media (max-width: 1520px) {
+        width: 40.7%;
+        background-size: contain;
+      }
+
+      @include xxl-tablet {
+        display: none;
+      }
     }
   }
 
@@ -55,20 +72,83 @@
     z-index: 5;
     padding-top: 75px;
     padding-right: 120px;
-    padding-bottom: 98px;
+    padding-bottom: 100px;
     padding-left: 120px;
+
+    @media (max-width: 1790px) {
+      padding-right: 100px;
+      padding-left: 100px;
+    }
+
+    @media (max-width: 1620px) {
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+
+    @include big-desktop {
+      padding-bottom: 60px;
+    }
+
+    @include xl-tablet {
+      padding-top: 50px;
+    }
+
+    @include small-tablet {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
   }
 
   &__title {
     margin-bottom: 80px;
     font-weight: 500;
     text-align: center;
+
+    @include small-tablet {
+      margin-bottom: 50px;
+    }
+
+    @include mini-mobile {
+      margin-bottom: 30px;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    column-gap: 104px;
+    column-gap: 6.7%;
+
+    @media (max-width: 1790px) {
+      column-gap: 5%;
+    }
+
+    @media (max-width: 1500px) {
+      column-gap: 3%;
+    }
+
+    @include xxl-tablet {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 10%;
+      row-gap: 40px;
+    }
+
+    @include tablet {
+      column-gap: 5%;
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 8%;
+    }
+
+    @include mobile {
+      column-gap: 5%;
+    }
+
+    @include mini-mobile {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 30px;
+    }
   }
 
   &__item {
@@ -79,5 +159,23 @@
     width: 100%;
     height: 227px;
     background-color: var(--white-color);
+
+    @include small-tablet {
+      height: 200px;
+    }
+
+    @include mobile {
+      height: 180px;
+    }
+
+    picture img{
+      @include mobile {
+        padding: 10px;
+      }
+
+      @include mini-mobile {
+        padding: 0px;
+      }
+    }
   }
 }
