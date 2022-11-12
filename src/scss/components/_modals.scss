@@ -45,6 +45,11 @@
   transform: translate(-50%,-200%);
   transition: opacity .3s, visibility .3s, transform .3s;
 
+
+  @include small-tablet {
+    width: 95%;
+  }
+
   &--active {
     visibility: visible;
     opacity: 1;
@@ -66,9 +71,44 @@
     line-height: 40px;
     font-weight: 700;
 
+    @include small-tablet {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    @include mini-mobile {
+      padding-right: 10px;
+      padding-left: 10px;
+      font-size: 26px;
+      line-height: 26px;
+    }
+
     picture {
       margin-top: 16px;
+
+      img {
+        @include small-tablet {
+          width: 70px;
+          height: 70px;
+        }
+
+        @include mini-mobile {
+          width: 60px;
+          height: 60px;
+        }
+      }
     }
+
+    span  {
+      display: inline-block;
+
+      &:nth-of-type(1) {
+        @include small-tablet {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
   }
 }
 
@@ -84,6 +124,11 @@
   background-repeat: no-repeat;
   background-size: contain;
   transition: opacity .3s;
+
+  @include mobile {
+    width: 30px;
+    height: 30px;
+  }
 
   &:hover {
     opacity: 0.7;
@@ -108,6 +153,10 @@
   transform: translate(-50%,-200%);
   transition: opacity .3s, visibility .3s, transform .3s;
 
+  @include small-tablet {
+    width: 95%;
+  }
+
   &--active {
     visibility: visible;
     opacity: 1;
@@ -126,5 +175,17 @@
     font-size: 36px;
     line-height: 40px;
     font-weight: 700;
+
+    @include small-tablet {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    @include mini-mobile {
+      padding-right: 10px;
+      padding-left: 10px;
+      font-size: 26px;
+      line-height: 26px;
+    }
   }
 }
