@@ -1,0 +1,130 @@
+.modals-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgba(0,0,0,.0);
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s,visibility .3s;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .3s,visibility .3s;
+  }
+}
+
+.success {
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 49%;
+  border-radius: 25px;
+  margin: 50px auto;
+  vertical-align: middle;
+  width: 635px;
+  min-height: 335px;
+  background-color: rgba(#071963, 0.85);
+  visibility: hidden;
+  opacity: 0;
+  cursor: default;
+  transform: translate(-50%,-200%);
+  transition: opacity .3s, visibility .3s, transform .3s;
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%,-50%);
+    transition: opacity .3s,visibility .3s,transform .3s;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 67px;
+    padding-right: 45px;
+    padding-left: 45px;
+    padding-bottom: 37px;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 700;
+
+    picture {
+      margin-top: 16px;
+    }
+  }
+}
+
+.modals-close {
+  position: absolute;
+  top: 17px;
+  right: 21px;
+  display: inline-block;
+  width: 35px;
+  height: 36px;
+  background-image: url("../img/close.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: 0.7;
+    transition: opacity .3s;
+  }
+}
+
+.empty {
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 49%;
+  border-radius: 25px;
+  margin: 50px auto;
+  vertical-align: middle;
+  width: 635px;
+  min-height: 335px;
+  background-color: rgba(#071963, 0.85);
+  visibility: hidden;
+  opacity: 0;
+  cursor: default;
+  transform: translate(-50%,-200%);
+  transition: opacity .3s, visibility .3s, transform .3s;
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%,-50%);
+    transition: opacity .3s,visibility .3s,transform .3s;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 60px;
+    padding-left: 60px;
+    height: 335px;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 700;
+  }
+}
